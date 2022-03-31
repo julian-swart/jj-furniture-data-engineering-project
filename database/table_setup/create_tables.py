@@ -49,7 +49,7 @@ def main(args):
     DATABASE=config.get('jj_furniture','database')
     
     try:
-        conn = psycopg2.connect(host='jj-furniture.cxrfsgl1cfex.us-east-2.rds.amazonaws.com', user=USER, password=PASSWORD, dbname=DATABASE)
+        conn = psycopg2.connect(host=HOST, user=USER, password=PASSWORD, dbname=DATABASE)
         cur = conn.cursor()
     
         drop_tables(cur, conn)
