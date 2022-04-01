@@ -25,6 +25,22 @@ CREATE TABLE IF NOT EXISTS customers
  )
 """
 
+create_product_table = """
+CREATE TABLE IF NOT EXISTS products
+(
+     product_code       BIGINT PRIMARY KEY,
+     manufacturer_id    INT,
+     brand_id           INT,
+     material_id        INT,
+     material_type_id   INT,
+     color_id           INT,
+     state_id           INT,
+     description        VARCHAR(100),
+     number_of_pieces   DATE,
+     cost               NUMERIC
+ )
+"""
+
 # INSERT QUERIES
 insert_customer_table = """
 REPLACE INTO customers (customer_id, first_name, last_name, email_address, \
@@ -32,8 +48,13 @@ dob, gender, street_address, state, date_created, create_source)
 VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
 """
 
+insert_product_table = """
+REPLACE INTO products (product_code, manufacturer_id, brand_id, material_id, \
+material_type_id, color_id, state_id, state, description, number_of_pieces, cost)
+VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+"""
+
 # QUERY LISTS
 drop_table_queries = [drop_customer_table]
 create_table_queries = [create_customer_table]
 insert_table_queries = [insert_customer_table]
-
