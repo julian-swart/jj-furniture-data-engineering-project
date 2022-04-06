@@ -8,6 +8,8 @@ Created on Thu Jun 25 09:43:39 2020
 # DROP TABLES
 drop_customer_table = "DROP TABLE IF EXISTS customers"
 
+drop_product_table = "DROP TABLE IF EXISTS products"
+
 # CREATE TABLES
 create_customer_table = """
 CREATE TABLE IF NOT EXISTS customers
@@ -55,6 +57,6 @@ VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
 """
 
 # QUERY LISTS
-drop_table_queries = [drop_customer_table]
-create_table_queries = [create_customer_table]
-insert_table_queries = [insert_customer_table]
+drop_table_queries = [drop_customer_table, drop_product_table]
+create_table_queries = [create_customer_table, create_product_table]
+insert_table_queries = [insert_customer_table, insert_product_table]
