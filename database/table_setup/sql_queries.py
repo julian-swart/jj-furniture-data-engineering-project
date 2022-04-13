@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS products
 
 # INSERT QUERIES
 insert_customer_table = """
-REPLACE INTO customers (customer_id, first_name, last_name, email_address, \
+INSERT INTO customers (customer_id, first_name, last_name, email_address, \
 dob, gender, street_address, state, date_created, create_source)
 VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
 """
