@@ -4,5 +4,5 @@ This is a data engineering project between Jon and Julian - two Data Scientist c
 We decided to create a fake business named JJ Furniture along with creating fake data sets. 
 
 Our goals: 
-- get swole
-- that's it. 
+- mimic what a real Customer Analytics team does at a large corporation  
+- take data from source systems, load it, create pipelines, ETL, and analytics-ready/model-ready data
