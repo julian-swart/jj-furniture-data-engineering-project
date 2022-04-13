@@ -1,0 +1,67 @@
+Meeting Log: 
+
+
+
+Tues. March 15th , 2022 - 
+- talked about problem definition, what we want to accomplish with this project, which is knowing and coding 
+  the full flow of data ingestion from sources all the way to dashboarding and model building 
+- the process as we see it: 
+	- Raw data that needs to be ingested 
+	- QA this raw data and send alerts to engineers and stakeholders 
+	- Design Star Schema or other architecture type database 
+	- ETL for analytics-ready data
+	- Basetables for models
+	- Create dashboards 
+	- Build models 
+
+Sun. March 20th, 2022 - 
+- we decided that we wanted to mimic what a Customer Analytics team is doing for a corporation - need to come up with a fake company and fake data 
+- attempted to create fake customer data in RStudio, wasn’t as easy as we hoped. Decided on trying Python next. 
+- we first need to create a Transactional database, which mimics what companies have, then load that into a OLAP database
+
+
+Tues. March 29th, 2022 - 
+- set up GitHub repo
+- started fake data creation - came up with fake furniture company “JJ Furniture” 
+- tested push and pull requests, learned branching 
+
+
+Thurs. March 31st, 2022 - 
+- added Database folder for Table Setup python scripts and connections python script
+- Jon walked me through how those work
+
+
+Tues. April 5th, 2022 - 
+- created Products table columns and added to table_setup.py 
+- figured out how to import a script as a module from differing path levels using libraries “os” and “sys”
+
+
+Tues. April 12th, 2022 - 
+- created meeting minutes log
+- Jon wanted to override local repo changes and git pull from the origin main, so he had to to a git reset —hard 
+- Jon figured out better method for config.ini path - similar to how we are loading a python script as a module 
+- still working on how to load our fake data into our transactional tables 
+	- do we use pandas?
+	- do we use a COPY command?
+	- do we iterate through the rows of our fake data? 
+	- found this blog which was helpful and validating: https://hakibenita.com/fast-load-data-python-postgresql 
+	- Jon successfully added first test of 1,000 rows of customer data into postgres using the row-by-row method
+	- we plan on following the above blog, we see that the COPY command is the fastest, but may take more memory
+- I made changes and so did he, I want to pull request without deleting my changes, and then push my changes
+	- I was on a previous branch, wanted to make a new branch, then commit, then pull from main to get Jon’s changes
+	- git switch -c <new_branch>
+	- git pull origin main
+	- git commit 
+- TODO: learn best practices on GitHub for past branches (delete them?)
+- TODO: Julian to add product data to products table in next meeting
+
+
+
+
+
+
+
+
+
+
+
