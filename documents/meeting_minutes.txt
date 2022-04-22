@@ -1,4 +1,4 @@
-Meeting Log: 
+Meeting Minutes: 
 
 
 
@@ -52,10 +52,17 @@ Tues. April 12th, 2022 -
 	- git switch -c <new_branch>
 	- git pull origin main
 	- git commit 
-- TODO: learn best practices on GitHub for past branches (delete them?)
-- TODO: Julian to add product data to products table in next meeting
 
 
+
+Thurs. April 21st 
+- from last meeting: 
+	- TODO: learn best practices on GitHub for past branches (delete them?)
+	- TODO: Julian to add product data to products table in next meeting
+- we discovered through trying to make a product table that we need a Product table and a Product Sets table 
+- also we needed to create the secondary/support tables first and then we'll sample from those to make the Product table 
+- TODO: make SQL Connection code a function: 
+- TODO: GitHub branch tutorial (didn't get to this today): https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches
 
 
 
