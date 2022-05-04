@@ -20,23 +20,23 @@ drop_description_table = "DROP TABLE IF EXISTS desription"
 create_customer_table = """
 CREATE TABLE IF NOT EXISTS customers
 (
-     customer_id    BIGINT PRIMARY KEY,
-     first_name     VARCHAR(20),
-     last_name      VARCHAR(20),
-     email_address  VARCHAR(50),
+     customer_id    SERIAL PRIMARY KEY,
+     first_name     VARCHAR(200),
+     last_name      VARCHAR(200),
+     email_address  VARCHAR(200),
      dob            DATE,
-     gender         VARCHAR(8),
-     street_address VARCHAR(50),
-     state          VARCHAR(50),
+     gender         VARCHAR(100),
+     street_address VARCHAR(1000),
+     state          VARCHAR(20),
      date_created   DATE,
-     create_source  VARCHAR(50)
+     create_source  VARCHAR(100)
  )
 """
 
 create_product_table = """
 CREATE TABLE IF NOT EXISTS products
 (
-     product_id       BIGINT PRIMARY KEY,
+     product_id       SERIAL PRIMARY KEY,
      material_id      INT,
      color_id         INT,
      description_id   INT,
@@ -46,26 +46,26 @@ CREATE TABLE IF NOT EXISTS products
 """
 
 create_material_table = """
-CREATE TABLE IF NOT EXISTS material
+CREATE TABLE IF NOT EXISTS materials
 (
-     material_id      BIGINT PRIMARY KEY,
-     material_desc    VARCHAR(100)
+     material_id      SERIAL PRIMARY KEY,
+     material_desc    VARCHAR(1000)
  )
 """
 
 create_color_table = """
-CREATE TABLE IF NOT EXISTS color
+CREATE TABLE IF NOT EXISTS colors
 (
-     color_id       BIGINT PRIMARY KEY,
-     color_desc     VARCHAR(100)
+     color_id       SERIAL PRIMARY KEY,
+     color_desc     VARCHAR(1000)
  )
 """
 
 create_description_table = """
-CREATE TABLE IF NOT EXISTS description
+CREATE TABLE IF NOT EXISTS descriptions
 (
-     description_id          BIGINT PRIMARY KEY,
-     product_description     VARCHAR(100)
+     description_id          SERIAL PRIMARY KEY,
+     product_description     VARCHAR(1000)
  )
 """
 
@@ -83,18 +83,18 @@ VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
 """
 
 insert_material_table = """
-INSERT INTO material (material_id, material_desc)
-VALUES (%s, %s)
+INSERT INTO materials (material_desc)
+VALUES (%s)
 """
 
 insert_color_table = """
-INSERT INTO color (color_id, color_desc)
-VALUES (%s, %s)
+INSERT INTO colors (color_desc)
+VALUES (%s)
 """
 
 insert_description_table = """
-INSERT INTO description (description_id, product_description)
-VALUES (%s, %s)
+INSERT INTO descriptions (product_description)
+VALUES (%s)
 """
 
 # QUERY LISTS
