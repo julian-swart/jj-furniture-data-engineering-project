@@ -77,9 +77,8 @@ VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
 """
 
 insert_product_table = """
-INSERT INTO products (product_code, manufacturer_id, brand_id, material_id, \
-material_type_id, color_id, state_id, state, description, number_of_pieces, cost)
-VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+INSERT INTO products (material_id, color_id, description_id, pieces, cost)
+VALUES (%s, %s, %s, %s, %s)
 """
 
 insert_material_table = """
