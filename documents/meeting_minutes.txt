@@ -71,6 +71,11 @@ Tues. May 3rd, 2022 -
 - then the fun begins! 
 
 
+Thurs. May 26th, 2022
+- realized we needed to simulate Product table first. Jon generated product data table with some sweet sampling code 
+- what’s next: simulate TRANSACTION and possibly INVENTORY data
+
+
 
 
 
