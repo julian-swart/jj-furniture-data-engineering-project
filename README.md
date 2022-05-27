@@ -6,3 +6,4 @@ We decided to create a fake business named JJ Furniture along with creating fake
 Our goals: 
 - mimic what a real Customer Analytics team does at a large corporation  
 - take data from source systems, load it, create pipelines, ETL, and analytics-ready/model-ready data
+- git better at git (git it)
