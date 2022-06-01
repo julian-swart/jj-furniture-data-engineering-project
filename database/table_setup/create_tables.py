@@ -52,7 +52,7 @@ def main(args):
         conn = psycopg2.connect(host=HOST, user=USER, password=PASSWORD, dbname=DATABASE)
         cur = conn.cursor()
     
-        drop_tables(cur, conn)
+        #drop_tables(cur, conn)
         create_tables(cur, conn)
     
     except Exception as e:

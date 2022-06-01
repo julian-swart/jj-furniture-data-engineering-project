@@ -76,6 +76,12 @@ Thurs. May 26th, 2022
 - what’s next: simulate TRANSACTION and possibly INVENTORY data
 
 
+Tues. May 31st, 2022
+- solved the transaction_date column by weighting the 12 years 
+- but we realized now we need to do it a different way - simulate 1 transaction at a time and insert it into the database 
+
+
+
 
 
 
