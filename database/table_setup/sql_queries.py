@@ -74,7 +74,7 @@ CREATE TABLE IF NOT EXISTS descriptions
 create_transactions_table = """
 CREATE TABLE IF NOT EXISTS transactions
 (
-     id                  SERIAL PRIMARY KEY
+     id                  SERIAL PRIMARY KEY,
      transaction_id          INT,
      transaction_date        DATE,
      customer_id             INT,
@@ -82,7 +82,7 @@ CREATE TABLE IF NOT EXISTS transactions
      line_item_number        SMALLINT,
      sale_amount             NUMERIC(20),
      quantity                SMALLINT,
-     sale_or_return          VARCHAR(10)
+     sale_or_return          INT
  )
 """
 
@@ -114,8 +114,8 @@ VALUES (%s)
 """
 
 insert_transactions_table = """
-INSERT INTO transactions (transaction_date, customer_id, product_id, line_item_number, sale_amount, quantity, sale_or_return)
-VALUES (%s, %s, %s, %s, %s, %s, %s)
+INSERT INTO transactions (transaction_id, transaction_date, customer_id, product_id, line_item_number, sale_amount, quantity, sale_or_return)
+VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
 """
 
 # QUERY LISTS
