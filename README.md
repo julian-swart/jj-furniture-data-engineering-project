@@ -4,6 +4,6 @@ This is a data engineering project between Jon and Julian - two Data Scientist c
 We decided to create a fake business named JJ Furniture and simulate the data.
 
 Our goals: 
-- create fake data sets that simulate a real Furniture business
+- create fake data sets that simulate a real furniture business
 - build pipelines that create a datawarehouse for analytics-ready/model-ready data that would used by a Customer Analytics/Data Science team
 - git better at git (git it)
