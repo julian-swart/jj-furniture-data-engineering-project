@@ -87,6 +87,20 @@ Tues. June 7th, 2022
 - then finally start doing some Data Engineering! 
 
 
+Tues. June 28th, 2022 
+- decided to do Returns next session and to not worry about inventory data at all 
+- worked on setting up our OLAP database - first by researching what was out there - ultimately ended up going with Postgresql but using AWS to set it up 
+- design star schema
+- come up with business use cases to build tables for - i.e., predictive customer basetable, slow-changing dimension for new/repeat/returning/lapsed customers, analytic/dashboard ready data 
+
+
+
+
+
+
+
+
+
 
 
 
