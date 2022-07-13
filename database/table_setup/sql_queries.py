@@ -88,9 +88,9 @@ CREATE TABLE IF NOT EXISTS transactions
 
 # INSERT QUERIES
 insert_customer_table = """
-INSERT INTO customers (customer_id, first_name, last_name, email_address,
+INSERT INTO customers (first_name, last_name, email_address,
 dob, gender, street_address, state, date_created, create_source)
-VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
 """
 
 insert_product_table = """
