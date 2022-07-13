@@ -93,9 +93,17 @@ Tues. June 28th, 2022
 - design star schema
 - come up with business use cases to build tables for - i.e., predictive customer basetable, slow-changing dimension for new/repeat/returning/lapsed customers, analytic/dashboard ready data 
 
+Thurs. July 7th, 2022
+- designed Star Schema with draw.io
+- learned a lot about SCD (Slow Changing Dimensions) and their Types (1,2,3,4)
+- did not do Returns
+- need to run the simulate transactions function to create more transactions 
+- maybe create a analytics best-practices guide for how-to-use SQL queries (current_flag = 1, joins, the trans_date between effective_start date and effective_end_date)
 
 
-
+Tues. July 12th, 2022
+- made our database connection code into a function that gets imported as a module 
+- 
 
 
 
