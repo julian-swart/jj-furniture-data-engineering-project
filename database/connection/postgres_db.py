@@ -9,18 +9,18 @@ import psycopg2
 import pandas as pd
 from configparser import ConfigParser
 
-class PostgresConnector(section):
+class PostgresConnector():
     '''Used for creating connection to MySQL database.
     Has methods for pulling data and performing database
     updates'''
     
-    def __init__(self, config_file_path='config.ini', section=section):
+    def __init__(self, config_file_path='config.ini', section='',encoding='utf-16'):
         '''Initialize connection to MySQL database.
         This requires a config file with named section
         containing the following fields:
         HOST, PORT, USER, PASSWORD, DATABASE'''
         cf = ConfigParser()
-        cf.read(config_file_path)
+        cf.read(config_file_path, encoding=encoding)
 
         self.db_host = cf.get(section, 'HOST')
         self.db_port = cf.getint(section, 'PORT')
@@ -30,9 +30,8 @@ class PostgresConnector(section):
         self._connect = psycopg2.connect(host=self.db_host, 
                                         port=int(self.db_port), 
                                         user=self.db_user, 
-                                        password=self.db_pwd, 
-                                        charset='UTF8MB4',
-                                        db=self.db_name)
+                                        password=self.db_pwd,
+                                        dbname=self.db_name)
     
     def queryall(self, sql, params=None, return_df=True):
         '''Executes SQL query and returns the fetched dataset'''
@@ -45,7 +44,7 @@ class PostgresConnector(section):
             result = cursor.fetchall()
             columns = [cursor.description[i][0] for \
                        i in range(len(cursor.description))]
-        except pymysql.MySQLError as e:
+        except Exception as e:
             print(e)
         finally:
             cursor.close()
@@ -64,7 +63,7 @@ class PostgresConnector(section):
             else:
                 cursor.execute(sql)
             self._connect.commit()
-        except pymysql.MySQLError as e:
+        except Exception as e:
             print(e)
         finally:
             cursor.close()
