@@ -103,7 +103,6 @@ Thurs. July 7th, 2022
 
 Tues. July 12th, 2022
 - made our database connection code into a function that gets imported as a module 
-- 
 
 
 
