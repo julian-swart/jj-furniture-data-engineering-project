@@ -100,11 +100,14 @@ Thurs. July 7th, 2022
 - need to run the simulate transactions function to create more transactions 
 - maybe create a analytics best-practices guide for how-to-use SQL queries (current_flag = 1, joins, the trans_date between effective_start date and effective_end_date)
 
-
 Tues. July 12th, 2022
 - made our database connection code into a function that gets imported as a module 
 
+Tues. July 26th, 2022
+- spent time trying to figure out how to go from oltp to olap (2 different databases, how do they connect?) and building our fact and dimension tables. Researched how to create the dim keys and how the fact keys are generated - we realized we create those for the end-user - they are solely join keys. We are shooting to be done by end-of-August - need a blog post to show off our efforts! 
 
+Tues. August 16th, 2022
+- had a guest appearance by Sumathi - a Data Engineer consultant that works with Julian at Vans. We had a few questions about the proper way to implement slow-changing dimensions (https://aws.amazon.com/blogs/big-data/implement-a-slowly-changing-dimension-in-amazon-redshift/) for a star schema and how to get data from our transactional database to our relational database within Redshift. She suggested we upload data to S3 first and then copy the data to our other database. Jon spent time figuring out how to add an IAM role and add me to it so we can do the upload command that we found for sql. Setting up IAM role was too complicated, which was needed in order to connect the RDS to the S3 bucket for the upload statement. We decided on going with python and boto3 instead. 
 
 
 
