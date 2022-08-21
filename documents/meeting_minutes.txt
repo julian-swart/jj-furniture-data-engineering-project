@@ -110,7 +110,7 @@ Tues. August 16th, 2022
 - had a guest appearance by Sumathi - a Data Engineer consultant that works with Julian at Vans. We had a few questions about the proper way to implement slow-changing dimensions (https://aws.amazon.com/blogs/big-data/implement-a-slowly-changing-dimension-in-amazon-redshift/) for a star schema and how to get data from our transactional database to our relational database within Redshift. She suggested we upload data to S3 first and then copy the data to our other database. Jon spent time figuring out how to add an IAM role and add me to it so we can do the upload command that we found for sql. Setting up IAM role was too complicated, which was needed in order to connect the RDS to the S3 bucket for the upload statement. We decided on going with python and boto3 instead. 
 
 
-
+-- test
 
 
 
