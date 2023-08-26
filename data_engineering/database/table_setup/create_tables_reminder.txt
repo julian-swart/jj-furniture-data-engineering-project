@@ -1,0 +1,7 @@
+Reminder on how to run create_tables.py to create the empty tables in the new database
+
+# change directory to here 
+cd ~/Documents/projects/data_eng/jj_furniture/jj-furniture/database/table_setup/
+
+# then run this, pointing it at the config.ini file 
+python3 create_tables.py ~/Documents/projects/data_eng/jj_furniture/jj-furniture/database/connection/config.ini
