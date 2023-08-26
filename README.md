@@ -8,4 +8,4 @@ Our goals:
 - build data intake pipelines using python and AWS
 - become more familiar with git
 - use the data we created to build some ML models
-- create [2 blog posts](https://julianswart.com) showing our learnings and work.  
+- create [2 blog posts](https://www.julianswart.com) showing our learnings and work.  
